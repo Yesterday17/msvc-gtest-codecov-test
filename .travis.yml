@@ -12,8 +12,8 @@ install:
 script:
   - export PATH=$MSBUILD_PATH:$PATH
   - MSBuild.exe msvc-gtest-codecov-test.sln
-  - ./x64/Debug/GoogleTest.exe > ./test.log
-  - cat ./test.log
+  - ./x64/Debug/GoogleTest.exe --gtest_output="xml:./test_result.xml"
+  - cat ./test_result.xml
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash) -f "./test.log" -t "af7c1dd4-adcf-44b8-b0d9-bcc72f30c0c9" || "Codecov did not collect test reports"
+  - bash <(curl -s https://codecov.io/bash) -f "./test_result.xml" -t "af7c1dd4-adcf-44b8-b0d9-bcc72f30c0c9" || "Codecov did not collect test reports"
