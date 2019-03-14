@@ -1,0 +1,7 @@
+os: windows
+language: cpp
+solution: msvc-gtest-codecov-test.sln
+install:
+  - nuget restore msvc-gtest-codecov-test.sln
+scripts:
+  - msbuild /p:Configuration=Release msvc-gtest-codecov-test.sln
