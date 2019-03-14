@@ -6,6 +6,7 @@ packages
 
 # OpenCppCoverage
 *.exe
+OpenCppCoverage
 CoverageReport*
 LastCoverageResults.log
 GoogleTestCoverage.xml
