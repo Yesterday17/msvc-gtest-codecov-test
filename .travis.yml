@@ -7,13 +7,13 @@ env:
 
 install:
   - choco install nuget.commandline
-  - choco install opencppcoverage --install-directory="C:\Users\travis\build\Yesterday17\msvc-gtest-codecov-test\"
+  - choco install opencppcoverage --install-directory="C:\\Users\\travis\\build\\Yesterday17\\msvc-gtest-codecov-test\\"
   - nuget restore msvc-gtest-codecov-test.sln
 
 script:
   - export PATH=$MSBUILD_PATH:$PATH
   - MSBuild.exe msvc-gtest-codecov-test.sln
-  - OpenCppCoverage.exe --sources=msvc-gtest-codecov-test --working_dir=test --excluded_sources=packages --export_type=cobertura -- .\x64\Debug\GoogleTest.exe
+  - OpenCppCoverage.exe --sources=msvc-gtest-codecov-test --working_dir=test --excluded_sources=packages --export_type=cobertura -- ".\\x64\\Debug\\GoogleTest.exe"
 
 after_success:
   - bash <(curl -s https://codecov.io/bash) -f "./GoogleTestCoverage.xml" -t "af7c1dd4-adcf-44b8-b0d9-bcc72f30c0c9" || "Codecov did not collect coverage reports"
