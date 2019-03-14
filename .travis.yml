@@ -13,7 +13,7 @@ install:
 script:
   - export PATH=$MSBUILD_PATH:$PATH
   - MSBuild.exe msvc-gtest-codecov-test.sln
-  - cmd /c opencppcoverage -v --sources="msvc-gtest-codecov-test" --working_dir="test" --excluded_sources="packages" --export_type=cobertura -- ".\x64\Debug\GoogleTest.exe"
+  - cmd /C codecov.bat
 
 after_success:
   - bash <(curl -s https://codecov.io/bash) -f "./GoogleTestCoverage.xml" -t "af7c1dd4-adcf-44b8-b0d9-bcc72f30c0c9" || "Codecov did not collect coverage reports"
