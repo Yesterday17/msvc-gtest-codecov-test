@@ -1,15 +1,17 @@
 language: cpp
+dotnet: 2.1.502
+os: windows
 
-matrix:
-  include:
-    - name: "MSVC on Windows"
-      os: windows
-      env:
-        - MSBUILD_PATH="c:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0\Bin"
-      # solution: msvc-gtest-codecov-test.sln
-      install:
-        - dotnet restore
-      #  - nuget restore msvc-gtest-codecov-test.sln
-      script:
-        - export PATH=$MSBUILD_PATH:$PATH
-        - MSBuild.exe msvc-gtest-codecov-test.sln
+env:
+  - MSBUILD_PATH="c:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0\Bin"
+# solution: msvc-gtest-codecov-test.sln
+
+install:
+  - dotnet restore
+  - dotnet build
+  - dotnet run
+#  - nuget restore msvc-gtest-codecov-test.sln
+
+script:
+  - export PATH=$MSBUILD_PATH:$PATH
+  - MSBuild.exe msvc-gtest-codecov-test.s
