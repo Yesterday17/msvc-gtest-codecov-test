@@ -6,7 +6,7 @@ env:
   - MSBUILD_PATH="c:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0\Bin"
 
 install:
-  - choco install nuget.commandline --pre
+  - choco install nuget.commandline
   - nuget restore msvc-gtest-codecov-test.sln
 
 script:
@@ -16,4 +16,4 @@ script:
   - cat ./test.log
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - bash <(curl -s https://codecov.io/bash) -t "af7c1dd4-adcf-44b8-b0d9-bcc72f30c0c9"
