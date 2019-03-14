@@ -7,4 +7,5 @@ solution: msvc-gtest-codecov-test.sln
 #  - nuget restore msvc-gtest-codecov-test.sln
 scripts:
   - export PATH=$MSBUILD_PATH:$PATH
-  - msbuild /p:Configuration=Release msvc-gtest-codecov-test.sln
+  - MSBuild -help
+  - MSBuild /p:Configuration=Release msvc-gtest-codecov-test.sln
