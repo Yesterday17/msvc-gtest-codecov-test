@@ -7,7 +7,8 @@ matrix:
       env:
         - MSBUILD_PATH="c:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0\Bin"
       # solution: msvc-gtest-codecov-test.sln
-      # install:
+      install:
+        - choco install visualstudio2017-workload-vctools -y --package-parameters "--no-includeRecommended --add Microsoft.VisualStudio.Component.VC.x86.amd64 --add Microsoft.VisualStudio.Component.Windows10SDK"
       #  - nuget restore msvc-gtest-codecov-test.sln
       script:
         - export PATH=$MSBUILD_PATH:$PATH
