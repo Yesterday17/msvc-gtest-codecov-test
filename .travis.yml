@@ -3,8 +3,8 @@ language: bash
 env:
   - MSBUILD_PATH="c:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0\Bin"
 solution: msvc-gtest-codecov-test.sln
-install:
-  - nuget restore msvc-gtest-codecov-test.sln
+#install:
+#  - nuget restore msvc-gtest-codecov-test.sln
 scripts:
   - export PATH=$MSBUILD_PATH:$PATH
   - msbuild /p:Configuration=Release msvc-gtest-codecov-test.sln
