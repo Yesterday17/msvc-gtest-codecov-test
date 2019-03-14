@@ -1,13 +1,12 @@
 language: bash
+dotnet: 2.1.502
 os: windows
 
 env:
   - MSBUILD_PATH="c:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0\Bin"
-# solution: msvc-gtest-codecov-test.sln
 
 install:
   - choco install nuget.commandline --pre
-  #- choco install codecov
   - nuget restore msvc-gtest-codecov-test.sln
 
 script:
