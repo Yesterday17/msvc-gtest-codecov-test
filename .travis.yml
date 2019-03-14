@@ -11,4 +11,4 @@ matrix:
       #  - nuget restore msvc-gtest-codecov-test.sln
       script:
         - export PATH=$MSBUILD_PATH:$PATH
-        - MSBuild.exe /p:Configuration=Release msvc-gtest-codecov-test.sln
+        - MSBuild.exe msvc-gtest-codecov-test.sln
