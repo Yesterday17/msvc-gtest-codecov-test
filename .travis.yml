@@ -7,11 +7,13 @@ env:
 # solution: msvc-gtest-codecov-test.sln
 
 install:
-  - dotnet restore
-  - dotnet build
-  - dotnet run
+  - choco install nuget.commandline --pre
+  - nuget restore msvc-gtest-codecov-test.sln
+#  - dotnet restore
+#  - dotnet build
+#  - dotnet run
 #  - nuget restore msvc-gtest-codecov-test.sln
 
 script:
   - export PATH=$MSBUILD_PATH:$PATH
-  - MSBuild.exe msvc-gtest-codecov-test.s
+  - MSBuild.exe msvc-gtest-codecov-test.sln
