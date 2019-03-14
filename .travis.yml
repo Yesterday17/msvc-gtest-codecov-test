@@ -7,7 +7,7 @@ env:
 
 install:
   - choco install nuget.commandline
-  - choco install opencppcoverage --install-directory="./"
+  - choco install opencppcoverage --install-directory="C:\Users\travis\build\Yesterday17\msvc-gtest-codecov-test\"
   - nuget restore msvc-gtest-codecov-test.sln
 
 script:
