@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.489
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "msvc-gtest-codecov-test", "msvc-gtest-codecov-test\msvc-gtest-codecov-test.vcxproj", "{ACC694A6-321D-49F1-BEFB-36CE98E5426E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GoogleTest", "test\GoogleTest\GoogleTest.vcxproj", "{0C1E9B96-E61F-4619-94DC-577B7DA7A33E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{ACC694A6-321D-49F1-BEFB-36CE98E5426E}.Release|x64.Build.0 = Release|x64
 		{ACC694A6-321D-49F1-BEFB-36CE98E5426E}.Release|x86.ActiveCfg = Release|Win32
 		{ACC694A6-321D-49F1-BEFB-36CE98E5426E}.Release|x86.Build.0 = Release|Win32
+		{0C1E9B96-E61F-4619-94DC-577B7DA7A33E}.Debug|x64.ActiveCfg = Debug|x64
+		{0C1E9B96-E61F-4619-94DC-577B7DA7A33E}.Debug|x64.Build.0 = Debug|x64
+		{0C1E9B96-E61F-4619-94DC-577B7DA7A33E}.Debug|x86.ActiveCfg = Debug|Win32
+		{0C1E9B96-E61F-4619-94DC-577B7DA7A33E}.Debug|x86.Build.0 = Debug|Win32
+		{0C1E9B96-E61F-4619-94DC-577B7DA7A33E}.Release|x64.ActiveCfg = Release|x64
+		{0C1E9B96-E61F-4619-94DC-577B7DA7A33E}.Release|x64.Build.0 = Release|x64
+		{0C1E9B96-E61F-4619-94DC-577B7DA7A33E}.Release|x86.ActiveCfg = Release|Win32
+		{0C1E9B96-E61F-4619-94DC-577B7DA7A33E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
