@@ -13,6 +13,7 @@ install:
 script:
   - export PATH=$MSBUILD_PATH:$PATH
   - MSBuild.exe msvc-gtest-codecov-test.sln
+  - opencppcoverage -h
   - ./codecov.bat
 
 after_success:
