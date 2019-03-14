@@ -1,5 +1,4 @@
-language: cpp
-dotnet: 2.1.502
+language: bash
 os: windows
 
 env:
@@ -10,9 +9,6 @@ install:
   - choco install nuget.commandline
   #- choco install codecov
   - nuget restore msvc-gtest-codecov-test.sln
-  #- dotnet restore
-  #- dotnet build
-  #- dotnet run
 
 script:
   - export PATH=$MSBUILD_PATH:$PATH
