@@ -1,0 +1,12 @@
+# Visual Studio
+.vs
+Debug
+Release
+packages
+
+# OpenCppCoverage
+*.exe
+OpenCppCoverage
+CoverageReport*
+LastCoverageResults.log
+GoogleTestCoverage.xml
