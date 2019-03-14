@@ -9,6 +9,7 @@ env:
 
 install:
   - choco install nuget.commandline
+  - choco install codecov
   - nuget restore msvc-gtest-codecov-test.sln
 #  - dotnet restore
 #  - dotnet build
@@ -18,7 +19,8 @@ install:
 script:
   - export PATH=$MSBUILD_PATH:$PATH
   - MSBuild.exe msvc-gtest-codecov-test.sln
-  - ./x64/Debug/GoogleTest.exe
+  - ./x64/Debug/GoogleTest.exe > ./test.log
+  - cat ./test.log
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - codecov -f ./test.log
